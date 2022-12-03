@@ -51,18 +51,21 @@ class Box:
     # 3) Для класса Box напишите статический метод, который будет подсчитывать
     # суммарный объем двух ящиков, которые будут его параметрами.
     @staticmethod
-    def box_and_box(self):
-        return None
+    def box_and_box(b1, b2):
+        return b1.x * b1.y * b1.z + b2.x * b2.y * b2.z
 
 
 def main():
     b = Box(1, 3, 5)
     b1 = Box(2, 4, 6)
+    b2 = Box(4, 6, 8)
     print(class_list)
     print(str(b))
     print(b)
     print(b1)
-    print(b1)
+    print(b2)
+    print(b.box_and_box(b, b2))
+    print(b.box_and_box(b, b1))
 
 
 if __name__ == "__main__":
